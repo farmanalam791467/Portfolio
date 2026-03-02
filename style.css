@@ -338,6 +338,29 @@ h4 {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-image {
+    flex-shrink: 0;
+    width: 250px;
+}
+
+.profile-pic {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.profile-pic:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
 }
 
 .about-content::before {
@@ -635,6 +658,13 @@ footer {
 
     .about-content {
         padding: 2rem 1.5rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .about-image {
+        width: 180px;
     }
 
     .project-info {
